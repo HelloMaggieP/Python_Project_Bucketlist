@@ -16,9 +16,9 @@ country2 = Country("New Zealand")
 country3 = Country("USA")
 # country_repo.save(country3)
 
-# # Cities
-# city1 = City("Edinburgh", "Avengers - Infinity War, Waverley Station", country1)
-# city_repo.save(city1)
+# Cities
+city1 = City("Edinburgh", "Avengers - Infinity War, Waverley Station", country1)
+city_repo.save(city1)
 # city2 = City("Glasgow", "Batman, City Center", country1)
 # city_repo.save(city2)
 # city3 = City("Balater", "The Crown- Baloral Castle", country1)
