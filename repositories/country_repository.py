@@ -45,9 +45,9 @@ def save(country):
 #     sql = "DELETE FROM countries"
 #     run_sql(sql)
 
-# NOT TESTED
-# delete country
-def delete(id):
-    sql = "DELETE FROM countries WHERE id = %s"
-    values = [id]
-    run_sql(sql, values)
+# # NOT TESTED
+# # delete country
+# def delete(id):
+#     sql = "DELETE FROM countries WHERE id = %s"
+#     values = [id]
+#     run_sql(sql, values)
