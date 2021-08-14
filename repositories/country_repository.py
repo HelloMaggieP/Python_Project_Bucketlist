@@ -11,6 +11,7 @@ def save(country):
     country.id = results[0]['id']
     return country 
 
+
 # NOT TESTED
 # def select_all(country):
 #     countries = []
@@ -23,16 +24,16 @@ def save(country):
 #         countries.append(country)
 #     return countries
 
-#NOT TESTED
-# def select(id):
-#     country = None
-#     sql = "SELECT * FROM countries WHERE id = %s"
-#     values = [id]
-#     result = run_sql(sql, values)[0]
+# NOT TESTED
+def select(id):
+    country = None
+    sql = "SELECT * FROM countries WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
 
-#     if result is not None:
-#         country = Country(result['name'], result['id'])
-#     return country
+    if result is not None:
+        country = Country(result['name'], result['id'])
+    return country
 
 
 
@@ -43,15 +44,15 @@ def save(country):
 # def add_country():
 #     pass
 
-def delete_all():
-    sql = "DELETE FROM countries"
-    run_sql(sql)
+#WORKS BUT NOT WRITTEN TEST FOR THIS
+# def delete_all():
+#     sql = "DELETE FROM countries"
+#     run_sql(sql)
+
 
 # NOT TESTED
 # delete country
-# def delete(id):
-#     sql = "DELETE FROM countries WHERE id = %s"
-#     values = [id]
-#     run_sql(sql, values)
-    
-
+def delete(id):
+    sql = "DELETE FROM countries WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

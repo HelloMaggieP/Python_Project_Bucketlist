@@ -21,6 +21,10 @@ def save(city):
 
 
 #delete city
+def delete(id):
+    sql = "DELETE FROM cities where id = %s"
+    values = [id]
+    run_sql(sql,values)
 
 #delete all cities
 def delete_all():
