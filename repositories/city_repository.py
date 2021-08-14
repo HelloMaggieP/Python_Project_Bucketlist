@@ -5,6 +5,10 @@ from models.city import City
 
 import repositories.country_repository as country_repo
 
+# #save cities 
+# def save(city):
+#     sql = "INSERT INTO cities ("
+
 # all cities
 
 # new city

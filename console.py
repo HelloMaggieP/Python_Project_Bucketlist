@@ -7,13 +7,13 @@ import repositories.city_repository as city_repo
 #use repositories and their functions to clear the table. 
 
 #Countries 
-country1 = Country("Scotland")
+country1 = Country('Scotland')
 country_repo.save(country1)
 
-# country2 = Country("New Zealand")
+country2 = Country("New Zealand")
 # country_repo.save(country2)
 
-# country3 = Country("USA")
+country3 = Country("USA")
 # country_repo.save(country3)
 
 # # Cities
@@ -37,3 +37,8 @@ country_repo.save(country1)
 # city_repo.save(city8)
 # city9 = City("Los Angeles", "Once Upon a time in Hollywood - Simi Valley", country3)
 # city_repo.save(city9)
+
+# result = country_repo.select()
+
+# for country in result:
+#     print(country.__dict__)
