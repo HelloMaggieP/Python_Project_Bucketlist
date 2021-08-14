@@ -21,3 +21,8 @@ def save(city):
 
 
 #delete city
+
+#delete all cities
+def delete_all():
+    sql = "DELETE FROM cities"
+    run_sql(sql)
