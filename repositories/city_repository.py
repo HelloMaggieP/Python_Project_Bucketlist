@@ -36,21 +36,22 @@ def select(id):
     result = run_sql(sql, values)
 
     if result is not None:
-        city = City(result['name'], result['film_locations'], result['country_id'], result['id'])
+        city = City(result['name'], result['film_locations'], result['country_id'])
     return city
 
-def countries(city):
-    countries = []
+# DON"T NEED THIS FUNCTIONALITY I DONT THINK 
+# def countries(city):
+#     countries = []
 
-    sql = "SELECT cities.* FROM cities INNER JOIN countries ON countries.id = cities.country_id WHERE countries.id = %s"
-    values = [city.country_id]
-    results = run_sql(sql, values)
+#     sql = "SELECT cities.* FROM cities INNER JOIN countries ON countries.id = cities.country_id WHERE countries.id = %s"
+#     values = [city.country_id]
+#     results = run_sql(sql, values)
 
-    for row in results:
-        country = Country(row['name'], row['id'])
-        countries.append(country)
+#     for row in results:
+#         country = Country(row['name'], row['id'])
+#         countries.append(country)
         
-    return countries
+#     return countries
 
 #NOT TESTED
 # #delete city

@@ -34,7 +34,7 @@ def select(id):
         country = Country(result['name'], result['id'])
     return country
 
-#calling countries and the cities attached to them. NOT wWORKING
+#calling countries and the cities attached to them. WORKING
 def cities(country):
     cities = []
 
@@ -46,7 +46,7 @@ def cities(country):
     for row in results:
         city = City(row['name'], row['film_locations'], row['country_id'])
         cities.append(city)
-        
+
     return cities
 
 

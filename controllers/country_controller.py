@@ -20,9 +20,11 @@ def show(id):
     return render_template("countries/show.html", country = country, cities = cities)
 
 
-# new country
+# new country# route /countries/new
 #get country
-# post country
+# post country route /countries method post
+
+#update / metho put 
 
 
 
