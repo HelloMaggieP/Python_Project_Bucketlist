@@ -11,7 +11,7 @@ def save(country):
     country.id = results[0]['id']
     return country 
 
-# NOT TESTED
+# Works on front end
 def select_all():
     countries = []
 
@@ -24,15 +24,15 @@ def select_all():
     return countries
 
 # NOT TESTED
-# def select(id):
-#     country = None
-#     sql = "SELECT * FROM countries WHERE id = %s"
-#     values = [id]
-#     result = run_sql(sql, values)[0]
+def select(id):
+    country = None
+    sql = "SELECT * FROM countries WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
 
-#     if result is not None:
-#         country = Country(result['name'], result['id'])
-#     return country
+    if result is not None:
+        country = Country(result['name'], result['id'])
+    return country
 
 # new country
 #get country
