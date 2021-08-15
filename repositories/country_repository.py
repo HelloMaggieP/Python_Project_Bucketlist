@@ -34,6 +34,22 @@ def select(id):
         country = Country(result['name'], result['id'])
     return country
 
+#calling countries and the cities attached to them. NOT wWORKING
+def cities(country):
+    cities = []
+
+    sql = "SELECT cities.* FROM cities INNER JOIN       countries ON countries.id = cities.country_id WHERE countries.id = %s"
+
+    values = [country.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        city = City(row['name'], row['film_locations'], row['country_id'])
+        cities.append(city)
+        
+    return cities
+
+
 # new country
 #get country
 # post country

@@ -29,15 +29,28 @@ def select_all():
 
 #NOT TESTED
 # #select one city
-# def select(id):
-#     city = None
-#     sql = "SELECT * FROM cities WHERE id = %s"
-#     values = [id]
-#     result = run_sql(sql, values)
+def select(id):
+    city = None
+    sql = "SELECT * FROM cities WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)
 
-#     if result is not None:
-#         city = City(result['name'], result['film_locations'], result['country_id'], result['id'])
-#     return city
+    if result is not None:
+        city = City(result['name'], result['film_locations'], result['country_id'], result['id'])
+    return city
+
+def countries(city):
+    countries = []
+
+    sql = "SELECT cities.* FROM cities INNER JOIN countries ON countries.id = cities.country_id WHERE countries.id = %s"
+    values = [city.country_id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        country = Country(row['name'], row['id'])
+        countries.append(country)
+        
+    return countries
 
 #NOT TESTED
 # #delete city

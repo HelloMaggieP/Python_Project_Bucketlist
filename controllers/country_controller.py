@@ -12,11 +12,12 @@ def countries():
     countries = country_repo.select_all()
     return render_template("countries/index.html", countries = countries)
 
+#calling countries and the cities attached to them. NOT wWORKING
 @countries_blueprint.route("/countries/<id>")
 def show(id):
     country = country_repo.select(id)
-    # line here to show cities when working
-    return render_template("countries/show.html", country = country)
+    cities = country_repo.cities(country)
+    return render_template("countries/show.html", country = country, cities = cities)
 
 
 # new country
