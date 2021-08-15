@@ -16,16 +16,16 @@ def save(city):
 
 #NOT TESTED
 # # select all cities
-# def select_all():
-#     cities = []
+def select_all():
+    cities = []
 
-#     sql = "SELECT * FROM cities"
-#     results = run_sql(sql)
+    sql = "SELECT * FROM cities"
+    results = run_sql(sql)
 
-#     for row in results:
-#         city = City(row['name'], row['film_locations'], row['country_id'], row['id'])
-#         cities.append(city)
-#     return cities
+    for row in results:
+        city = City(row['name'], row['film_locations'], row['country_id'], row['id'])
+        cities.append(city)
+    return cities
 
 #NOT TESTED
 # #select one city
