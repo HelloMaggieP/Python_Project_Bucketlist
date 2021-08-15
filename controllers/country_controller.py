@@ -20,17 +20,28 @@ def show(id):
     return render_template("countries/show.html", country = country, cities = cities)
 
 
-# new country# route /countries/new
+# new country# route /countries/new NOT TESTED
 @countries_blueprint.route("/countries/new", methods = ['GET'])
 def new_country():
     countries = country_repo.select_all()
     cities = city_repo.select_all()
     return render_template("countries/new.html", countries = countries, cities = cities)
 
+# CREATE Country
+#POST/countries
+# @countries_blueprint.route("/countries", methods = ['POST'])
+# def create_country():
+#     country = request.form['country']
+#     city = request.form['city']
+#     film_locations = request.form['film_locations']
+#     country = country_repo.select(country)
+#     city = city_repo.select(city)
+#     new_country = City(city, film_locations, country)
+#     country_repo.save(new_country)
+#     return redirect("/countries")
 
-# post country route /countries method post
 
-#update / metho put 
+
 
 
 #delete country

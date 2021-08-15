@@ -49,20 +49,13 @@ def cities(country):
 
     return cities
 
-
-# new country
-#get country
-# post country
-# def add_country():
-#     pass
-
 #WORKS BUT NOT WRITTEN TEST FOR THIS
 def delete_all():
     sql = "DELETE FROM countries"
     run_sql(sql)
 
 # # NOT TESTED
-# # delete country
+# # delete country - DOESNT SEEM TO BE WORKING ATM
 def delete(id):
     sql = "DELETE FROM countries WHERE id = %s"
     values = [id]
