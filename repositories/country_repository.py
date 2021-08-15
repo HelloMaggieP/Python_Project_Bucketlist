@@ -57,13 +57,13 @@ def cities(country):
 #     pass
 
 #WORKS BUT NOT WRITTEN TEST FOR THIS
-# def delete_all():
-#     sql = "DELETE FROM countries"
-#     run_sql(sql)
+def delete_all():
+    sql = "DELETE FROM countries"
+    run_sql(sql)
 
 # # NOT TESTED
 # # delete country
-# def delete(id):
-#     sql = "DELETE FROM countries WHERE id = %s"
-#     values = [id]
-#     run_sql(sql, values)
+def delete(id):
+    sql = "DELETE FROM countries WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

@@ -55,12 +55,12 @@ def select(id):
 
 #NOT TESTED
 # #delete city
-# def delete(id):
-#     sql = "DELETE FROM cities where id = %s"
-#     values = [id]
-#     run_sql(sql,values)
+def delete(id):
+    sql = "DELETE FROM cities where id = %s"
+    values = [id]
+    run_sql(sql,values)
 
 # #delete all cities
-# def delete_all():
-#     sql = "DELETE FROM cities"
-#     run_sql(sql)
+def delete_all():
+    sql = "DELETE FROM cities"
+    run_sql(sql)

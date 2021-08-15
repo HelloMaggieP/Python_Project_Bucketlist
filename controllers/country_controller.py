@@ -21,15 +21,20 @@ def show(id):
 
 
 # new country# route /countries/new
-#get country
+@countries_blueprint.route("/countries/new", methods = ['GET'])
+def new_country():
+    countries = country_repo.select_all()
+    cities = city_repo.select_all()
+    return render_template("countries/new.html", countries = countries, cities = cities)
+
+
 # post country route /countries method post
 
 #update / metho put 
 
 
-
 #delete country
-# @countries_blueprint.route("countries/<id>/delete", methods = ['POST'])
-# def delete_country(id):
-#     country_repo.delete(id)
-#     return redirect('/countries')
+@countries_blueprint.route("/countries/<id>/delete", methods = ['POST'])
+def delete_country(id):
+    country_repo.delete(id)
+    return redirect('/countries')
