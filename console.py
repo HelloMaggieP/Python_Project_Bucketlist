@@ -18,7 +18,6 @@ country_repo.save(country2)
 country3 = Country("USA")
 country_repo.save(country3)
 
-country_repo.delete(country1)
 
 # Cities
 city1 = City("Edinbrugh", "Avengers - Infinity War, Waverley Station", country1)

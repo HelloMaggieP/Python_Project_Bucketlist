@@ -12,16 +12,16 @@ def save(country):
     return country 
 
 # NOT TESTED
-# def select_all(country):
-#     countries = []
+def select_all():
+    countries = []
 
-#     sql = "SELECT * FROM countries"
-#     results = run_sql(sql)
+    sql = "SELECT * FROM countries"
+    results = run_sql(sql)
 
-#     for row in results:
-#         country = Country(row['name'], row['id'])
-#         countries.append(country)
-#     return countries
+    for row in results:
+        country = Country(row['name'], row['id'])
+        countries.append(country)
+    return countries
 
 # NOT TESTED
 # def select(id):
