@@ -28,14 +28,25 @@ def new_entry():
     return render_template("cities/new.html", countries = countries, cities = cities)
 
 #NOT TESTED IF WORKING
-@cities_blueprint.route("/cities", methods = ['POST'])
+# ADD visited         = request.form['visited']
+@cities_blueprint.route("/cities/new", methods = ['POST'])
 def create_entry():
     country         = request.form['country']
     city            = request.form['city']
     film_locations  = request.form['film_locations']
-    visited         = request.form['visited']
-    country         = country_repo.select(country)
-    city            = city_repo.select(city)
-    new_entry       = City(city, film_locations, country, visited)
-    country_repo.save(new_entry)
+    new_entry       = City(city, film_locations, country)
+    city_repo.save(new_entry)
     return redirect("/cities")
+
+# copied from country #
+#     @countries_blueprint.route("/countries/new", methods = ['POST'])
+# def create_country():
+#     country = request.form['country']
+#     city = request.form['city']
+#     film_locations = request.form['film_locations']
+#     # visited = request.form['visited']
+#     # country = country_repo.select(country)
+#     city = city_repo.select(city)
+#     new_country = City(city, film_locations, country) #add visited attribute here when working
+#     country_repo.save(new_country)
+#     return redirect("/countries")
