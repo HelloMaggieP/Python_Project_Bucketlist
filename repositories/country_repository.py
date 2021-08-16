@@ -39,7 +39,6 @@ def cities(country):
     cities = []
 
     sql = "SELECT cities.* FROM cities INNER JOIN       countries ON countries.id = cities.country_id WHERE countries.id = %s"
-
     values = [country.id]
     results = run_sql(sql, values)
 
