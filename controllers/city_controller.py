@@ -3,6 +3,7 @@ from flask import Blueprint
 from models.city import City
 import repositories.city_repository as city_repo
 import repositories.country_repository as country_repo
+
 cities_blueprint = Blueprint("cities", __name__)
 
 @cities_blueprint.route("/cities")
@@ -31,9 +32,10 @@ def new_entry():
 # ADD visited         = request.form['visited']
 @cities_blueprint.route("/cities/new", methods = ['POST'])
 def create_entry():
-    country         = request.form['country']
+    country_id      = request.form['country_id']
     city            = request.form['city']
     film_locations  = request.form['film_locations']
+    country         = country_repo.select(country_id)
     new_entry       = City(city, film_locations, country)
     city_repo.save(new_entry)
     return redirect("/cities")
