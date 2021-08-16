@@ -10,6 +10,6 @@ CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
     film_locations VARCHAR(255),
-    visited BOOLEAN
-    country_id INT REFERENCES countries(id) ON DELETE CASCADE,
+    visited BOOLEAN,
+    country_id INT REFERENCES countries(id) ON DELETE CASCADE
 );

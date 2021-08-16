@@ -23,7 +23,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        city = City(row['name'], row['film_locations'], row['country_id'], row['id'])
+        city = City(row['name'], row['film_locations'], row['country_id'],row['id'],row['visited'])
         cities.append(city)
     return cities
 
@@ -36,7 +36,7 @@ def select(id):
     result = run_sql(sql, values)
 
     if result is not None:
-        city = City(result['name'], result['film_locations'], result['country_id'])
+        city = City(result['name'], result['film_locations'], result['country_id'], result['visited'])
     return city
 
 # DON"T NEED THIS FUNCTIONALITY I DONT THINK 
