@@ -20,27 +20,27 @@ country_repo.save(country3)
 
 
 # Cities
-city1 = City("Edinbrugh", "Avengers - Infinity War, Waverley Station", country1)
+city1 = City("Edinbrugh", "Avengers - Infinity War, Waverley Station", country1, False)
 city_repo.save(city1)
 
-city2 = City("Glasgow", "Batman, City Center", country1)
+city2 = City("Glasgow", "Batman, City Center", country1, False)
 city_repo.save(city2)
-city3 = City("Balater", "The Crown- Baloral Castle", country1)
+city3 = City("Balater", "The Crown- Baloral Castle", country1, False)
 city_repo.save(city3)
 
 
-city4 = City("Matamata", "Lord Of The Rings - Hobbiton",  country2)
+city4 = City("Matamata", "Lord Of The Rings - Hobbiton",  country2, False)
 city_repo.save(city4)
-city5 = City("Auckland", "Chronicles of Narnia", country2)
+city5 = City("Auckland", "Chronicles of Narnia", country2, False)
 city_repo.save(city5)
-city6 = City("Wellington", "King Kong, Lyall Bay", country2)
+city6 = City("Wellington", "King Kong, Lyall Bay", country2, False)
 city_repo.save(city6)
 
-city7 = City("New York", "Breakfast at Tiffany's - Times Square ",  country3)
+city7 = City("New York", "Breakfast at Tiffany's - Times Square ",  country3, False)
 city_repo.save(city7)
-city8 = City("Washington DC", "Die Hard",  country3)
+city8 = City("Washington DC", "Die Hard",  country3, True)
 city_repo.save(city8)
-city9 = City("Los Angeles", "Once Upon a time in Hollywood - Simi Valley",  country3)
+city9 = City("Los Angeles", "Once Upon a time in Hollywood - Simi Valley",  country3, True)
 city_repo.save(city9)
 
 
