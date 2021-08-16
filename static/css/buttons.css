@@ -1,0 +1,12 @@
+button {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: flex-start;
+    padding: 8px 32px;
+
+    background: #024873;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+}

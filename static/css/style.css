@@ -1,0 +1,58 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-areas: inherit;
+    width: 1440px;
+    height: 111px;
+    left: 0px;
+    top: 0px;
+}
+#line {
+    height: 1px;
+    width: 100%;
+    /* padding: 16px; */
+    background-color: black;
+}
+
+main {
+    padding-top: 48px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+}
+
+#main_title {
+    
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    height: 80px;
+    color: #024873;
+    width: 30%;
+}
+
+.nav_bar {
+    
+    font-family: Roboto Slab;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    width: 50%;
+    list-style: none;
+    color: #024873;
+    background-color: blue;
+}
+
+.nav_bar li {
+    padding: 16px;
+    height: 24px;
+}
+
+footer {
+/* footer info here
+}

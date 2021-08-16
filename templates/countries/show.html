@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<li>{{country.name}}</li>
+
+{{country.name}}
+
+{% for city in cities %}
+    <li>{{city.name}}</li>
+    {{city.film_locations}}
+{% endfor %}
+
+{% endblock %}

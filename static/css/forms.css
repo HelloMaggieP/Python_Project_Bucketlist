@@ -1,0 +1,32 @@
+#form{
+    width: 33%;
+    padding-left:33%;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+}
+
+input {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin: 8px 8px 8px 0px;
+    height: 40px;
+    width: 100%;
+    font-size: 16pt;
+    padding-left: 8px;
+}
+select {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin: 8px 8px 8px 0px;
+    height: 40px;
+    width: 100%;
+    font-size: 16pt;
+    padding-left: 8px;
+    padding-right: 24px;
+}
+
