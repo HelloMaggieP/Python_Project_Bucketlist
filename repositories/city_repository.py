@@ -37,7 +37,7 @@ def select(id):
 
     if result is not None:
         country = country_repo.select(result['country_id'])
-        city = City(result['name'], result['film_locations'], result['visited'], country, result['id'])
+        city = City(result['name'], result['film_locations'], country, result['visited'], result['id'])
     return city
 
 #NOT NEEDED DELETE WHEN SURE ITS NOT NEEDED
