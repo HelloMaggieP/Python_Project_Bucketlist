@@ -4,13 +4,13 @@ Travel Bucket List is an app that allows the user to create and modify their ult
 BRIEF
 Travel Bucket List - Build an app to track someone's travel adventures.
 
-- The app should allow the user to track countries and cities they want to visit and those they have visited.
-- The user should be able to create and edit countries
-- Each country should have one or more cities to visit
-- The user should be able to create and delete entries for cities
-- The app should allow the user to mark destinations as visited or still to see
+- The app allows the user to track countries and cities they want to visit and those they have visited.
+- The user is able to create and edit countries
+- Each country can have one or more cities to visit
+- The user can create and delete entries for cities
+- The app allows the user to mark destinations as visited or still to see
 
-Software on Laptop Host:
+SOFTWARE ON LAPTOP HOST
 - Python3
 - Flask
 - HTML5/CSS
@@ -19,8 +19,8 @@ Software on Laptop Host:
 - GitHub 
 
 RUNNING INSTRUCTIONS
-clone repository 
-createdb bucket_list
-Run: python3 console.py
-In Terminal: flask run 
-Chrome: localhost:5000/
+- clone repository 
+- "createdb bucket_list"
+- Run: "python3 console.py"
+- In Terminal: "flask run" 
+-To View in Chrome: localhost:5000/
