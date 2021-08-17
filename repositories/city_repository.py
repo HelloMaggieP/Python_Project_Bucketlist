@@ -39,6 +39,19 @@ def select(id):
         city = City(result['name'], result['film_locations'], result['country_id'], result['visited'])
     return city
 
+#NOT NEEDED DELETE WHEN SURE ITS NOT NEEDED
+def select_visited():
+    cities =[]
+
+    sql = "SELECT * FROM cities WHERE visited = True"
+    results = run_sql(sql)
+
+    for row in results:
+        country = country_repo.select(row['country_id'])
+        city = City(row['name'], row['film_locations'], country, row['visited'], row['id'])
+        cities.append(city)
+    return cities
+
 # DON"T NEED THIS FUNCTIONALITY I DONT THINK 
 # def countries(city):
 #     countries = []
@@ -53,7 +66,6 @@ def select(id):
         
 #     return countries
 
-#NOT TESTED
 # #delete city
 def delete(id):
     sql = "DELETE FROM cities where id = %s"

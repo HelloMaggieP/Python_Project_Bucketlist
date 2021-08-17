@@ -41,6 +41,12 @@ def create_entry():
     city_repo.save(new_entry)
     return redirect("/cities")
 
+@cities_blueprint.route("/cities/visited")
+def select_visited():
+    cities = city_repo.select_visited()
+    return render_template("cities/show.html", cities = cities)
+
+
 # copied from country #
 #     @countries_blueprint.route("/countries/new", methods = ['POST'])
 # def create_country():

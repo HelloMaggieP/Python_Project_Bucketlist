@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{{country.name}}
 
-<!-- {% for city in cities %}
-    {{city.name}}
-    {{city.film_locations}}
-    {{city.country}}
-    {{city.visited}}
-{% endfor %} -->
 
-{% endblock %}  
+{% for city in cities %}
+   <p>{{city.name}}</p>
+    <p>{{city.film_locations}}</p>
+    <p>{{city.country.name}}</p>
+    <p>{{city.visited}}</p>
+{% endfor %}
+
+{% endblock %}

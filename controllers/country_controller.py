@@ -36,8 +36,8 @@ def create_country():
     country_repo.save(new_country)
     return redirect("/countries")
 
-#delete country ---> WAS WORKING NOW ITS NOT 
-@countries_blueprint.route("/countries/<id>/delete", methods = ['POST'])
-def delete_country(id):
-    country_repo.delete(id)
-    return redirect('/countries')
+#Functionlity not needed for MVP
+# @countries_blueprint.route("/countries/<id>/delete", methods = ['POST'])
+# def delete_country(id):
+#     country_repo.delete(id)
+#     return redirect('/countries')
