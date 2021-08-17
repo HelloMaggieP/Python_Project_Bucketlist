@@ -28,8 +28,7 @@ def new_entry():
     cities = city_repo.select_all()
     return render_template("cities/new.html", countries = countries, cities = cities)
 
-#NOT TESTED IF WORKING
-# ADD visited         = request.form['visited']
+
 @cities_blueprint.route("/cities/new", methods = ['POST'])
 def create_entry():
     country_id      = request.form['country_id']
@@ -40,6 +39,14 @@ def create_entry():
     new_entry       = City(city, film_locations, country, visited)
     city_repo.save(new_entry)
     return redirect("/cities")
+
+#GET/ EDIT 'cities/<id>/edit'
+@cities_blueprint.route("/cities/<id>/edit", methods=['GET'])
+def edit_cities(id):
+    city = city_repo.select(id)
+    return render_template('cities/edit/html', city=city)
+
+#UPDATE / PUT 'cities/<id>
 
 @cities_blueprint.route("/cities/visited")
 def select_visited():
