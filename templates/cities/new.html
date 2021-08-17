@@ -7,7 +7,7 @@
     <label for="country_id">Country</label><br>
     <select name="country_id" id="country_id">
         {% for country in countries %}
-        <option value="{{country.name}}">{{country.name}}</option>
+        <option value="{{country.id}}">{{country.name}}</option>
         {% endfor %}
     </select>
     <div>

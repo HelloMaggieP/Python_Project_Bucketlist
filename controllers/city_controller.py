@@ -32,10 +32,11 @@ def new_entry():
 # ADD visited         = request.form['visited']
 @cities_blueprint.route("/cities/new", methods = ['POST'])
 def create_entry():
-    country         = request.form['country']
+    country_id      = request.form['country_id']
     city            = request.form['city']
     film_locations  = request.form['film_locations']
-    visited         = request.form['visited'] 
+    visited         = request.form['visited']
+    country         = country_repo.select(country_id) 
     new_entry       = City(city, film_locations, country, visited)
     city_repo.save(new_entry)
     return redirect("/cities")
