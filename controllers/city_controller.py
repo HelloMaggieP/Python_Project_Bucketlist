@@ -17,7 +17,7 @@ def show(id):
     country = city_repo.countries(city)
     return render_template("cities/show.html", city=city, country=country)
 
-@cities_blueprint.route("/cities/<id>/delete")
+@cities_blueprint.route("/cities/<id>/delete", methods = ['POST'])
 def delete_city(id):
     city_repo.delete(id)
     return redirect("/cities")

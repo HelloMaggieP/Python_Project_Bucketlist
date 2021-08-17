@@ -19,8 +19,8 @@ Software on Laptop Host:
 - GitHub 
 
 RUNNING INSTRUCTIONS
-clone repo 
-create db
-run console
-flask 
-local host
+clone repository 
+createdb bucket_list
+Run: python3 console.py
+In Terminal: flask run 
+Chrome: localhost:5000/

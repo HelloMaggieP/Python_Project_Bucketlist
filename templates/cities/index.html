@@ -9,4 +9,18 @@
 </tr>
 {% endfor %}
 
+{% for city in cities %}
+    <li>
+        <p>Name{{city.name}}</p>
+        <p>Film-Locatoon{{city.film_locations}}</p>
+        <p>Country Name{{city.country.name}}</p>
+        <p>visited {{city.visited}}</p>
+           <p> id {{city.id}}</p>
+        <p>
+            <form action="/cities/{{ city.id }}/delete" method='POST'>
+                <input type="submit" value="delete">
+            </form></p>
+    </li>
+{% endfor %}
+
 {% endblock %}

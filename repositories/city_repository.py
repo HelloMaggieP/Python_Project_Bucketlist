@@ -23,7 +23,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        city = City(row['name'], row['film_locations'], row['country_id'],row['id'],row['visited'])
+        city = City(row['name'], row['film_locations'], row['country_id'],row['visited'],row['id'])
         cities.append(city)
     return cities
 
@@ -36,7 +36,8 @@ def select(id):
     result = run_sql(sql, values)
 
     if result is not None:
-        city = City(result['name'], result['film_locations'], result['country_id'], result['visited'])
+        country = country_repo.select(result['country_id'])
+        city = City(result['name'], result['film_locations'], result['visited'], country, result['id'])
     return city
 
 #NOT NEEDED DELETE WHEN SURE ITS NOT NEEDED
