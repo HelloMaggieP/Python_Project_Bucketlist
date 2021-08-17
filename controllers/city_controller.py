@@ -66,7 +66,7 @@ def select_not_visited():
     cities = city_repo.select_not_visited()
     return render_template("cities/show.html", cities = cities)
 
-@cities_blueprint.route("/cities/<id>/delete", methods = ['POST'])
+@cities_blueprint.route("/cities/<id>/delete", methods=['POST'])
 def delete_city(id):
     city_repo.delete(id)
     return redirect("/cities")
