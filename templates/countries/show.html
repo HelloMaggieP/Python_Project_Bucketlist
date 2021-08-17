@@ -2,13 +2,10 @@
 
 {% block content %}
 
-<li>{{country.name}}</li>
+<h2>All Countries</h2>
 
-{{country.name}}
-
-{% for city in cities %}
-    <li>{{city.name}}</li>
-    {{city.film_locations}}
+{% for country in countries %}
+    <p>{{country.name}}</p>
 {% endfor %}
 
 {% endblock %}

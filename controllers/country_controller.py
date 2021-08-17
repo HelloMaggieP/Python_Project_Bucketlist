@@ -36,6 +36,22 @@ def create_country():
     country_repo.save(new_country)
     return redirect("/countries")
 
+#GET Country
+@countries_blueprint.route("/countries/<id>/edit")
+def edit_countries(id):
+    country = country_repo.select(id)
+    return render_template('countries/edit.html', country=country)
+
+#POST Country
+@countries_blueprint.route("/countries/<id>", methods=['POST'])
+def update_country(id):
+    name = request.form['name']
+    updated_country = Country(name, int(id))
+    country_repo.update(updated_country)
+    return redirect("/countries")
+
+
+
 #Functionlity not needed for MVP
 # @countries_blueprint.route("/countries/<id>/delete", methods = ['POST'])
 # def delete_country(id):

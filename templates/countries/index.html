@@ -5,8 +5,15 @@
 
 {% for country in countries %}
 <tr>
-    <td><a href="/countries">{{country.name}}</a></td>
+    <p>{{country.name}}</p>
+    <p>{{country.id}}</p>
+    <!-- <td><a href="/countries">{{country.name}}</a></td> -->
 </tr>
+    <form action="/countries/{{ country.id }}/edit" method='GET'>
+        <input type="submit" value="edit">
+    </form>
 {% endfor %}
+
+
 
 {% endblock %}

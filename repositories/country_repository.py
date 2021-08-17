@@ -3,7 +3,6 @@ from models.country import Country
 from models.city import City
 import repositories.city_repository as city_repo
 
-
 def save(country):
     sql = "INSERT INTO countries ( name ) VALUES ( %s ) RETURNING id"
     values = [country.name]
@@ -11,7 +10,6 @@ def save(country):
     country.id = results[0]['id']
     return country 
 
-# Works on front end
 def select_all():
     countries = []
 
@@ -23,7 +21,6 @@ def select_all():
         countries.append(country)
     return countries
 
-# NOT TESTED
 def select(id):
     country = None
     sql = "SELECT * FROM countries WHERE id = %s"
@@ -47,6 +44,11 @@ def cities(country):
         cities.append(city)
 
     return cities
+
+def update(country):
+    sql = "UPDATE countries SET name = %s WHERE id = %s"
+    values = [country.name, country.id]
+    run_sql(sql, values)
 
 #WORKS BUT NOT WRITTEN TEST FOR THIS - DO NOT NEED FOR MVP
 # def delete_all():

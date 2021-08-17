@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
 <form id="form" action="/cities/{{city.id}}" method="post">
@@ -25,7 +24,7 @@
             <option value="False" {% if city.visited == False %} selected="selected" {% endif %}>No</option>
         </select>
     </div> <br>
-    <button type="submit">Update Country</button>
+    <button type="submit">Update City</button>
 </form>
 
 {% endblock %}
