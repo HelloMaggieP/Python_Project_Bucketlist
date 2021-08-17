@@ -4,6 +4,8 @@ body {
 
 .nav_bar {
     display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10%;
     font-family: Roboto Slab;
     font-weight: 400;
     font-size: 18px;
@@ -19,7 +21,6 @@ body {
 
 #main_title {
     grid-row-start: 1;
-    justify-self: center;
     font-family: Roboto Slab;
     font-style: normal;
     font-weight: normal;
@@ -28,7 +29,7 @@ body {
     color: #024873;
     width: 30%;
 }
-.nav_bar li {
+.nav_bar p {
     grid-row-end: 2;   
 }
 
