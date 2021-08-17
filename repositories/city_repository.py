@@ -52,19 +52,17 @@ def select_visited():
         cities.append(city)
     return cities
 
-# DON"T NEED THIS FUNCTIONALITY I DONT THINK 
-# def countries(city):
-#     countries = []
+def select_not_visited():
+    cities =[]
 
-#     sql = "SELECT cities.* FROM cities INNER JOIN countries ON countries.id = cities.country_id WHERE countries.id = %s"
-#     values = [city.country_id]
-#     results = run_sql(sql, values)
+    sql = "SELECT * FROM cities WHERE visited = False"
+    results = run_sql(sql)
 
-#     for row in results:
-#         country = Country(row['name'], row['id'])
-#         countries.append(country)
-        
-#     return countries
+    for row in results:
+        country = country_repo.select(row['country_id'])
+        city = City(row['name'], row['film_locations'], country, row['visited'], row['id'])
+        cities.append(city)
+    return cities
 
 # #delete city
 def delete(id):
