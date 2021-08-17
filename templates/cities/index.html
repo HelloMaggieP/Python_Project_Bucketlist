@@ -22,9 +22,10 @@
             </form>
         </p>
         <p>
-            <form action="/cities/{{ city.id }}/delete" method='POST'>
-                <input type="submit" value="delete">
+            <form action="/cities/{{ city.id }}/edit" method='GET'>
+                <input type="submit" value="edit">
             </form>
+  
         </p>
     </li>
 {% endfor %}

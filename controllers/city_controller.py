@@ -1,3 +1,4 @@
+from controllers.country_controller import countries
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.city import City
@@ -17,10 +18,6 @@ def show(id):
     country = city_repo.countries(city)
     return render_template("cities/show.html", city=city, country=country)
 
-@cities_blueprint.route("/cities/<id>/delete", methods = ['POST'])
-def delete_city(id):
-    city_repo.delete(id)
-    return redirect("/cities")
 
 @cities_blueprint.route("/cities/new", methods = ['GET'])
 def new_entry():
@@ -44,20 +41,20 @@ def create_entry():
 @cities_blueprint.route("/cities/<id>/edit", methods=['GET'])
 def edit_cities(id):
     city = city_repo.select(id)
-    return render_template('cities/edit.html', city=city)
+    countries = country_repo.select_all()
+    return render_template('cities/edit.html', city=city, countries = countries)
 
 #UPDATE / PUT 'cities/<id>
-@cities_blueprint.route("cities/<id>", methods = ['POST'])
+@cities_blueprint.route("/cities/<id>", methods = ['POST'])
 def update_city(id):
     country_id      = request.form['country_id']
     city            = request.form['city']
     film_locations  = request.form['film_locations']
     visited         = request.form['visited']
     country         = country_repo.select(country_id)
-    updated_city    = City(city, film_locations, country, visited)
-    city_repo.save(updated_city)
+    updated_city    = City(city, film_locations, country, visited, int(id))
+    city_repo.update(updated_city)
     return redirect("/cities")
-
 
 @cities_blueprint.route("/cities/visited")
 def select_visited():
@@ -68,3 +65,8 @@ def select_visited():
 def select_not_visited():
     cities = city_repo.select_not_visited()
     return render_template("cities/show.html", cities = cities)
+
+@cities_blueprint.route("/cities/<id>/delete", methods = ['POST'])
+def delete_city(id):
+    city_repo.delete(id)
+    return redirect("/cities")

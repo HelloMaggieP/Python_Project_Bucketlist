@@ -33,7 +33,7 @@ def select(id):
     city = None
     sql = "SELECT * FROM cities WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)
+    result = run_sql(sql, values)[0]
 
     if result is not None:
         country = country_repo.select(result['country_id'])
@@ -64,6 +64,12 @@ def select_not_visited():
         city = City(row['name'], row['film_locations'], country, row['visited'], row['id'])
         cities.append(city)
     return cities
+
+#update 
+def update(city):
+    sql = "UPDATE cities SET (name, film_locations, country_id, visited) = (%s, %s , %s, %s) WHERE id = %s"
+    values = [city.name, city.film_location, city.country.id, city.visited, city.id]
+    run_sql(sql, values)
 
 # #delete city
 def delete(id):

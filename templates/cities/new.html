@@ -7,16 +7,16 @@
     <label for="country_id">Country</label><br>
     <select name="country_id" id="country_id">
         {% for country in countries %}
-        <option value="{{country.id}}">{{country.name}}</option>
+        <option value="{{country.id}}" required autofocus>{{country.name}} </option>
         {% endfor %}
     </select>
     <div>
         <label for="city">City</label> <br>
-        <input type="text" id="city" name="city">
+        <input type="text" id="city" name="city" required autofocus>
     </div>
     <div>
         <label for="film_locations">Film Locations</label> <br>
-        <input type="text" id="film_locations" name="film_locations">
+        <input type="text" id="film_locations" name="film_locations" required autofocus>
     </div>
     <div>
         <label for="visited">Visited</label> <br>
