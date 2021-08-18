@@ -8,6 +8,7 @@
     font-size: 16px;
     grid-area: auto;
 }
+
 .delete_button{
     padding: 8px 32px;
     border-radius: 8px;
@@ -25,5 +26,15 @@
     font-size: 16px;
     grid-area: auto;
     max-width: 10%;
+}
+
+.edit_button2 {
+    padding: 8px 32px;
+    background: #024873;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    grid-area: auto;
+    min-width: 5%;
 }
 

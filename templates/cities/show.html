@@ -3,21 +3,25 @@
 {% block content %}
 
 <div class= 'filter_options'>
-    <tr ><td><h4>View:</h4></td>
+    <tr ><td>View:</td>
         <td ><a href="/countries" >All Countries</a></td>
         <td><a href="/cities/visited">Visited Cities</a></td>
         <td><a href="/cities/not-visited">Planned</a></td>
        
     </tr>
     </div>
-    <br>
+
     <section class='individual_cities'>
             {% for city in cities %}
             <section class= 'cities'>
                 <h3><p>{{city.name}}</p></h3>
                 <p>{{city.film_locations}}</p>
                 <p>{{city.country.name}}</p>
-                <p>{{city.visited}}</p>
+                <p> Visited? 
+                    {% if city.visited == True %} Yes
+                    {% else %} No
+                    {% endif %}
+                </p>
                     <form action="/cities/{{ city.id }}/edit" method='GET'>
                         <input class='submit_button' type="submit" value="edit">
                     </form>

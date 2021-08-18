@@ -4,7 +4,7 @@ body {
 
 .nav_bar {
     display: grid;
-    grid-template-columns: 70% 6% 12% 12%;
+    grid-template-columns: 64%  6% 12% 12% 6%;
     grid-template-rows: 1fr;
     padding: 0;
     margin: 0;
@@ -127,6 +127,8 @@ section{
     border-radius: 10px;
     margin: 16px;
     padding-left: 16px;
+    padding-right: 16px;
+    min-width: 240px;
 }
 
 .footer {
