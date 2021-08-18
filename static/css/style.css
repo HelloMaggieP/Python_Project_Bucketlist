@@ -22,6 +22,7 @@ body {
 
 #main_title {
     font-family: Roboto Slab;
+    padding-left: 16px;
     font-style: normal;
     font-weight: normal;
     font-size: 48px;
@@ -45,9 +46,25 @@ main {
     padding-top: 16px;
 }
 
-h1, h2, h3 {
+.page_title{
+    font-family: 'Roboto Slab', serif;
+    
+}
+h2, h3 {
     font-family: 'Roboto Slab', serif;
 }
+
+p {
+    font-family: 'Roboto Slab', serif;
+}
+
+.filter_options{
+    font-family: 'Roboto', sans-serif;
+    padding-left: 8px;
+
+}
+
+
 
 footer {
 /* footer info here

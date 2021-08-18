@@ -3,21 +3,21 @@
 {% block content %}
 
 
-
-<tr><td>View:</td>
-    <td><a href="/countries">All Countries</a></td>
+<div class= 'filter_options'>
+<tr ><td>View:</td>
+    <td ><a href="/countries" >All Countries</a></td>
     <td><a href="/cities/visited">Visited Cities</a></td>
-    <td><a href="/cities/not-visited">Cities to Visit</a></td>
+    <td><a href="/cities/not-visited">Future Travel Locations</a></td>
    
 </tr>
+</div>
 
-<h1>All Cities</h1>
+<h1  class ='page_title'>All Cities</h1>
 
-{% for city in cities %}
-    <li>
+    {% for city in cities %}
         <p>City: {{city.name}}</p>
-        <p>FilmLocation: {{city.film_locations}}</p>
-        <p>Country{{city.country.name}}</p>
+        <p>Film Location: {{city.film_locations}}</p>
+        <p>Country: {{city.country.name}} </p>
         <p>Visited? 
             {% if city.visited == True %} Yes
             {% else %} No
@@ -33,7 +33,8 @@
                 <input type="submit" value="edit">
             </form>
         </p>
-    </li>
+    
 {% endfor %}
+
 
 {% endblock %}
