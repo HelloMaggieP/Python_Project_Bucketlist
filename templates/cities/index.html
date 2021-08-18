@@ -13,11 +13,11 @@
 </div>
 
 <h1  class ='page_title'>All Cities</h1>
-<section class='individual_cities'>
+<section class='individual_cities'></section>
     
     {% for city in cities %}
     <section class= 'cities'>
-        <p>City: {{city.name}}, Country: {{city.country.name}} </p>
+        <p>{{city.name}}, {{city.country.name}} </p>
         <p>Film Location: {{city.film_locations}}</p>
         <p>Visited? 
             {% if city.visited == True %} Yes
@@ -35,6 +35,7 @@
                 </div>
 
     </section>
+    <br>
     
 {% endfor %}
 </section>

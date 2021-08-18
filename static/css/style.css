@@ -48,6 +48,7 @@ main {
 
 .page_title{
     font-family: 'Roboto Slab', serif;
+    justify-items: center;
     
 }
 h2, h3 {
@@ -64,9 +65,12 @@ p {
     color: black;
 }
 .cities{
+    display: grid;
+    grid-template-rows: 1fr;
     border-style: solid;
-    border-radius: 5%;
+    border-radius: 16px;
     max-width: 40%;
+    padding-left: 16px;
 }
 
 section{
@@ -78,10 +82,6 @@ section{
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-}
-
-.individual_cities{
-   
 }
 
 footer {
