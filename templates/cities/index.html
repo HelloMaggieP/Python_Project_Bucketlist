@@ -2,13 +2,11 @@
 
 {% block content %}
 
-
 <div class= 'filter_options'>
 <tr ><td>View:</td>
     <td ><a href="/countries" >All Countries</a></td>
     <td><a href="/cities/visited">Visited Cities</a></td>
-    <td><a href="/cities/not-visited">Future Travel Locations</a></td>
-   
+    <td><a href="/cities/not-visited">Future Travel Locations</a></td> 
 </tr>
 </div>
 
@@ -17,13 +15,14 @@
     
     {% for city in cities %}
     <section class= 'cities'>
-        <p>{{city.name}}, {{city.country.name}} </p>
+        <p><h3>{{city.name}}, {{city.country.name}} </h3>
+            <br>
         <p>Film Location: {{city.film_locations}}</p>
-        <p>Visited? 
+            Visited? 
             {% if city.visited == True %} Yes
             {% else %} No
             {% endif %}
-            </p>
+            <br>
                 <div class='button_container'>  
                     <form action="/cities/{{ city.id }}/delete" method='POST'>
                         <input class='delete_button' type="submit" value="delete">
@@ -33,7 +32,6 @@
                         <input class='submit_button' type="submit" value="edit">
                     </form>
                 </div>
-
     </section>
     <br>
     

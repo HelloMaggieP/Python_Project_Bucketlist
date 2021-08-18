@@ -3,7 +3,7 @@
 {% block content %}
 <div class= 'filter_options'>
     <tr ><td>View:</td>
-        <td ><a href="/countries" >All Countries</a></td>
+        <td ><a href="/countries">All Countries</a></td>
         <td><a href="/cities/visited">Visited Cities</a></td>
         <td><a href="/cities/not-visited">Planned</a></td>
        
@@ -15,7 +15,7 @@
 <section class='individual_countries'>
 {% for country in countries %}
     <div class='country_entry'>
-        <p>{{country.name}}  
+        <p><h3>{{country.name}}</h3>  
             <form action="/countries/{{ country.id }}/edit" method='GET'>
                 <input class='edit_button' type="submit" value="edit">
             </form>
