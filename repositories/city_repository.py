@@ -68,7 +68,7 @@ def select_not_visited():
 #update 
 def update(city):
     sql = "UPDATE cities SET (name, film_locations, country_id, visited) = (%s, %s , %s, %s) WHERE id = %s"
-    values = [city.name, city.film_location, city.country.id, city.visited, city.id]
+    values = [city.name, city.film_locations, city.country.id, city.visited, city.id]
     run_sql(sql, values)
 
 # #delete city
