@@ -1,21 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
+
+<tr><td>View:</td>
+    <td><a href="/countries">All Countries</a></td>
+    <td><a href="/cities/visited">Visited Cities</a></td>
+    <td><a href="/cities/not-visited">Cities to Visit</a></td>
+   
+</tr>
+
 <h1>All Cities</h1>
 
 {% for city in cities %}
-<tr>
-    <td><a href="/cities">{{city.name}}</a></td>
-</tr>
-{% endfor %}
-
-{% for city in cities %}
     <li>
-        <p>Name{{city.name}}</p>
-        <p>Film-Locatoon{{city.film_locations}}</p>
-        <p>Country Name{{city.country.name}}</p>
-        <p>visited {{city.visited}}</p>
-           <p> id {{city.id}}</p>
+        <p>City: {{city.name}}</p>
+        <p>FilmLocation: {{city.film_locations}}</p>
+        <p>Country{{city.country.name}}</p>
+        <p>Visited? 
+            {% if city.visited == True %} Yes
+            {% else %} No
+            {% endif %}
+            </p>
         <p>
             <form action="/cities/{{ city.id }}/delete" method='POST'>
                 <input type="submit" value="delete">
@@ -25,7 +32,6 @@
             <form action="/cities/{{ city.id }}/edit" method='GET'>
                 <input type="submit" value="edit">
             </form>
-  
         </p>
     </li>
 {% endfor %}
