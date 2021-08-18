@@ -13,28 +13,30 @@
 </div>
 
 <h1  class ='page_title'>All Cities</h1>
-
+<section class='individual_cities'>
+    
     {% for city in cities %}
-        <p>City: {{city.name}}</p>
+    <section class= 'cities'>
+        <p>City: {{city.name}}, Country: {{city.country.name}} </p>
         <p>Film Location: {{city.film_locations}}</p>
-        <p>Country: {{city.country.name}} </p>
         <p>Visited? 
             {% if city.visited == True %} Yes
             {% else %} No
             {% endif %}
             </p>
-        <p>
-            <form action="/cities/{{ city.id }}/delete" method='POST'>
-                <input type="submit" value="delete">
-            </form>
-        </p>
-        <p>
-            <form action="/cities/{{ city.id }}/edit" method='GET'>
-                <input type="submit" value="edit">
-            </form>
-        </p>
+                <div class='button_container'>  
+                    <form action="/cities/{{ city.id }}/delete" method='POST'>
+                        <input class='delete_button' type="submit" value="delete">
+                    </form>
+                
+                    <form action="/cities/{{ city.id }}/edit" method='GET'>
+                        <input class='submit_button' type="submit" value="edit">
+                    </form>
+                </div>
+
+    </section>
     
 {% endfor %}
-
+</section>
 
 {% endblock %}

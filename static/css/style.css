@@ -61,10 +61,28 @@ p {
 .filter_options{
     font-family: 'Roboto', sans-serif;
     padding-left: 8px;
-
+    color: black;
+}
+.cities{
+    border-style: solid;
+    border-radius: 5%;
+    max-width: 40%;
 }
 
+section{
+    display: grid;
+}
 
+.button_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.individual_cities{
+   
+}
 
 footer {
 /* footer info here

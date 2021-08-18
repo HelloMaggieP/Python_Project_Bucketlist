@@ -23,7 +23,8 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        city = City(row['name'], row['film_locations'], row['country_id'],row['visited'],row['id'])
+        country = country_repo.select(row['country_id'])
+        city = City(row['name'], row['film_locations'], country, row['visited'],row['id'])
         cities.append(city)
     return cities
 
