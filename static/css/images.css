@@ -1,0 +1,8 @@
+#main_image {
+    width: 100%;
+    
+} 
+.main_image_container{
+    height: 60vh;
+    overflow: hidden;
+}
