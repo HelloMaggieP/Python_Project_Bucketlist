@@ -48,11 +48,13 @@ main {
 
 .page_title{
     font-family: 'Roboto Slab', serif;
-    justify-items: center;
+    text-align: center;
+    color: black;
     
 }
 h2, h3 {
     font-family: 'Roboto Slab', serif;
+    text-align: center;
 }
 
 p {
@@ -71,6 +73,9 @@ p {
     border-radius: 16px;
     max-width: 40%;
     padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 30%;
+    min-width: 250px;
 }
 
 section{
@@ -81,7 +86,7 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
+    width: 50%;
 }
 
 footer {
