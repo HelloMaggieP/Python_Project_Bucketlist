@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Add New Country</h2>
+<h2 class='page_title'>Add New Country</h2>
 
-<form action="/countries/new" method="post">
+<form  id="form" action="/countries/new" method="post">
     <div>
         <label for="country" required>Country</label>
         <input type="text" id="country" name="country">
     </div>
-    <button type="submit">Submit</button>
+    <button class='submit_button' type="submit">Submit</button>
 </form> 
 
 {% endblock %}

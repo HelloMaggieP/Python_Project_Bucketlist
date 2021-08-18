@@ -46,15 +46,18 @@ main {
     padding-top: 16px;
 }
 
-.page_title{
+.page_title {
     font-family: 'Roboto Slab', serif;
     text-align: center;
     color: black;
     
 }
-h2, h3 {
+h2 {
     font-family: 'Roboto Slab', serif;
     text-align: center;
+}
+h3{
+    font-family: 'Roboto Slab', serif;
 }
 
 p {
@@ -100,6 +103,10 @@ section{
     padding left: 16px;
 }
 
+.individual_cities{
+    margin-top: 16px;
+}
+
 .country_entry {
     border: solid;
     border-radius: 10px;
@@ -107,6 +114,14 @@ section{
     padding-left: 16px;
 }
 
-footer {
-/* footer info here
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:  
+    color: #024873;
+    text-align: center;
+    height: 16px;
+    padding: 16px;
 }

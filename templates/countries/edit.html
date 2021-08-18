@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<h2>Edit Country</h2>
+<h1 class='page_title'> Edit Country </h1>
 
-<form action="/countries/{{country.id}}" method="post">
+<form id="form" action="/countries/{{country.id}}" method="post">
     <div>
         <label for="country" required>Country</label>
         <input type="text" id="country" name="country" value= "{{country.name}}" autofocus required>
     </div>
-    <button type="submit">Submit</button>
+    <button class='submit_button' type="submit">Submit</button>
 </form> 
 
 {% endblock %}
