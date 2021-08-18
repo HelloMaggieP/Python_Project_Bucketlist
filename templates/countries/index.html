@@ -1,19 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>All Countries</h1>
+<div class= 'filter_options'>
+    <tr ><td>View:</td>
+        <td ><a href="/countries" >All Countries</a></td>
+        <td><a href="/cities/visited">Visited Cities</a></td>
+        <td><a href="/cities/not-visited">Future Travel Locations</a></td>
+       
+    </tr>
+    </div>
+    
+<h1 class ='page_title'>All Countries</h1>
 
+<section class='individual_countries'>
 {% for country in countries %}
-<tr>
-    <p>{{country.name}}</p>
-    <p>{{country.id}}</p>
-    <!-- <td><a href="/countries">{{country.name}}</a></td> -->
-</tr>
-    <form action="/countries/{{ country.id }}/edit" method='GET'>
-        <input type="submit" value="edit">
-    </form>
+    <div class='country_entry'>
+        <p>{{country.name}}  
+            <form action="/countries/{{ country.id }}/edit" method='GET'>
+                <input class='edit_button' type="submit" value="edit">
+            </form>
+        </p>
+    </div>
 {% endfor %}
-
-
+</section>
 
 {% endblock %}

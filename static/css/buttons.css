@@ -15,3 +15,13 @@
     font-size: 16px;
 
 }
+
+.edit_button {
+    padding: 8px 32px;
+    background: #024873;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    grid-area: auto;
+    max-width: 10%;
+}
