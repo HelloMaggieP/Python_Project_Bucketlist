@@ -28,7 +28,7 @@ body {
     font-size: 48px;
     height: 80px;
     color: #024873;
-    
+    text-decoration: none;   
 }
 
 .nav_bar p {
@@ -50,8 +50,8 @@ main {
     font-family: 'Roboto Slab', serif;
     text-align: center;
     color: black;
-    
 }
+
 h2 {
     font-family: 'Roboto Slab', serif;
     text-align: center;
@@ -82,8 +82,6 @@ a:active {
     padding-left: 16px;
     padding-right: 16px;
     color: black;
-    
-    
 }
 .cities{
     display: grid;

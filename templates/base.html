@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
@@ -11,27 +12,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <title>My Bucket List</title>
 </head>
 <body>
     <header>     
         <nav class="nav_bar">
-                <h1><a href="/cities"id="main_title">My Bucket List </a></h1>
-                <p><a href="/cities">My List</a></p>
-                <p><a href="/countries/new">Add New Country</a></p>
-                <p><a href="/cities/new">Add New City</a></p>
-                <p></p>
+            <h1><a href="/cities"id="main_title">My Bucket List</a></h1>
+            <p><a href="/cities">My List</a></p>
+            <p><a href="/countries/new">Add New Country</a></p>
+            <p><a href="/cities/new">Add New City</a></p>
+            <p></p>
         </nav>
-   
     </header>
     <main>
         <div id="line"></div>
+
         {% block content%}
 
         {% endblock%}
+
     </main>
-    <footer class='footer'>
-        © MaggieP 2021
-    </footer>
+         <footer class='footer'>
+             © MaggieP 2021
+         </footer>
 </body>
 </html>

@@ -42,11 +42,3 @@ city8 = City("Washington DC", "Die Hard",  country3, True)
 city_repo.save(city8)
 city9 = City("Los Angeles", "Once Upon a time in Hollywood - Simi Valley",  country3, True)
 city_repo.save(city9)
-
-
-
-# DONT THINK THIS IS NEEDED
-# result = country_repo.select()
-
-# for country in result:
-#     print(country.__dict__)
