@@ -9,3 +9,5 @@ class TestCity(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    # self.assertEqual("Scotland", self.country1.name)
