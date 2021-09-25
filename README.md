@@ -1,4 +1,4 @@
-# Screenshot of Landing Page
+
 Travel Bucket List is an app that allows the user to create and modify their ultimate travel list. 
 
 BRIEF
